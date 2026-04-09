@@ -48,7 +48,7 @@ if prompt := st.chat_input("Escribe aquí..."):
         st.markdown(prompt)
 
     # Respuesta de Gemini
-    model = genai.GenerativeModel('gemini-1.5-pro', system_instruction=system_instr)
+    model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=system_instr)
     chat = model.start_chat(history=[
         {"role": "user" if m["role"] == "user" else "model", "parts": [m["content"]]}
         for m in st.session_state.messages[:-1]
