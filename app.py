@@ -48,7 +48,7 @@ if prompt := st.chat_input("Escribe aquí..."):
         st.markdown(prompt)
 
 # Respuesta de Gemini simplificada
-    model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=system_instr)
+    model = genai.GenerativeModel('gemini-pro', system_instruction=system_instr)
     
     with st.chat_message("assistant"):
         # En lugar de usar start_chat, vamos a enviarlo directo para probar
